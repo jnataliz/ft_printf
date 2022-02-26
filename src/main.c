@@ -229,7 +229,7 @@ void	test10(void)
 int	main(void)
 {
 	char *p = "test"; // {'t', 'e', 's', 't', '\0'}-
-	int i = 20;
+	int i = -1;
 	int *y = &i;
 // 0x..01 20  x
 // 0x..02 20  i
@@ -250,6 +250,8 @@ int	main(void)
 	test10();
 	ft_printf("%X\n", -1);
 	ft_printf("%x\n", -1);
-	printf("%p\n", p);
 	printf("%p\n", y);
+	ft_printf("%p\n", y);
+	printf("%p\n", p);
+	ft_printf("%p\n", p);
 }

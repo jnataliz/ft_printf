@@ -6,7 +6,7 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:05:46 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/26 10:27:46 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:33:34 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int	exec_flag(struct s_flag s, va_list	ptr)
 		x = exec_flag_x(ptr, (s.code == 'X'));
 	else if (s.code == 'u')
 		x = exec_flag_u(ptr);
+	else if (s.code == 'p')
+		x = exec_flag_p(ptr);
 	return (x);
 }

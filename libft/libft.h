@@ -6,7 +6,7 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 10:55:57 by plpelleg          #+#    #+#             */
-/*   Updated: 2022/02/25 00:19:18 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:31:09 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 char	*ft_xtoa(unsigned int n, int x);
 char	*ft_uitoa(unsigned int n);
+char	*ft_ptoa(unsigned long int n);
 #endif

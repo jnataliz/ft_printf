@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_xtoa.c                                          :+:      :+:    :+:   */
+/*   ft_ptoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 20:06:38 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/26 16:12:17 by jnataliz         ###   ########.fr       */
+/*   Created: 2022/02/26 16:10:48 by jnataliz          #+#    #+#             */
+/*   Updated: 2022/02/26 16:33:51 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_count(unsigned int n)
+int	ft_count_p(unsigned int n)
 {
-	int c;
+	int	c;
 
 	c = 1;
 	while (n >= 16)
@@ -25,23 +25,21 @@ int ft_count(unsigned int n)
 	return (c);
 }
 
-char	*ft_xtoa(unsigned int n, int x)
+char	*ft_ptoa(unsigned long int n)
 {
 	int			c;
 	char		*str1;
 	char		*str;
 	char		*digits;
 
-	if (x == 0)
-		digits = "0123456789abcdef";
-	else 
-		digits = "0123456789ABCDEF";	
-	c = ft_count(n);
+
+	digits = "0123456789abcdef";
+	c = ft_count_p(n);
 	str1 = malloc(sizeof(*str1) * (c + 1));
 	if (!str1)
 		return (NULL);
-	str = str1;
 	str1[c] = '\0';
+	str = str1;
 	while (c > 0)
 	{
 		str1[c - 1] = digits[(n % 16)];
@@ -50,4 +48,3 @@ char	*ft_xtoa(unsigned int n, int x)
 	}
 	return (str);
 }
-	

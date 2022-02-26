@@ -6,7 +6,7 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:48:04 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/25 17:26:36 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:14:01 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,3 +72,18 @@ int	exec_flag_u(va_list ptr)
 	free(str1);
 	return (y);
 }
+
+int	exec_flag_p(va_list ptr)
+{
+	int		x;
+	int		y;
+	char	*str1;
+
+	x = va_arg(ptr, unsigned long int);
+	str1 = ft_ptoa(x);
+	y = ft_printf("0x%s", str1);
+	free(str1);
+	return (y);
+}
+
+

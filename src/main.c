@@ -24,6 +24,8 @@ void	test7(void);
 void	test8(void);
 void	test9(void);
 void	test10(void);
+void	test11(void);
+void	test12(void);
 
 void	test1(void)
 {
@@ -226,16 +228,60 @@ void	test10(void)
 
 	ft_putstr_fd("---------------\n", 1);
 }
-int	main(void)
-{
-	char *p = "test"; // {'t', 'e', 's', 't', '\0'}-
+
+void	test11(void)
+{	
 	int i = -1;
 	int *y = &i;
-// 0x..01 20  x
-// 0x..02 20  i
-// 0x..03 0x..02 y
-// void *
-	printf("%i\n", *y); // y -> i // stampa 20
+	int res2;
+	int res;
+
+	ft_putstr_fd("****** Test 11 ******\n", 1);
+	res = ft_printf("%p\n", y);
+	res2 = printf("%p\n", y);
+	if (res != res2)
+	{
+		ft_putstr_fd("Fail! Expected: ", 1);
+		ft_putnbr_fd(res2, 1);
+		ft_putstr_fd(", got: ", 1);
+		ft_putnbr_fd(res, 1);
+		ft_putstr_fd("\n",1);
+	}
+	else
+		ft_putstr_fd("Ok!\n", 1);
+
+	ft_putstr_fd("---------------\n", 1);
+}
+
+void	test12(void)
+{	
+
+	int res2;
+	int res;
+
+	ft_putstr_fd("****** Test 12 ******\n", 1);
+	res = ft_printf("%p\n", (void*)0);
+	res2 = printf("%p\n", (void*)0);
+	if (res != res2)
+	{
+		ft_putstr_fd("Fail! Expected: ", 1);
+		ft_putnbr_fd(res2, 1);
+		ft_putstr_fd(", got: ", 1);
+		ft_putnbr_fd(res, 1);
+		ft_putstr_fd("\n",1);
+	}
+	else
+		ft_putstr_fd("Ok!\n", 1);
+
+	ft_putstr_fd("---------------\n", 1);
+}
+
+
+int	main(void)
+{
+	int i = -1;
+	int *y = &i;
+
 	printf("sizeof(int*) = %li\nsizeof(long int) = %li\n", sizeof(int *), sizeof(long int));
 	printf("0x%lx\n", (unsigned long int)y);
 	test1();
@@ -248,10 +294,6 @@ int	main(void)
 	test8();
 	test9();
 	test10();
-	ft_printf("%X\n", -1);
-	ft_printf("%x\n", -1);
-	printf("%p\n", y);
-	ft_printf("%p\n", y);
-	printf("%p\n", p);
-	ft_printf("%p\n", p);
+	test11();
+	test12();
 }

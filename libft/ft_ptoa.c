@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_count_p(unsigned int n)
+static int	ft_count(unsigned long int n)
 {
 	int	c;
 
@@ -32,9 +32,8 @@ char	*ft_ptoa(unsigned long int n)
 	char		*str;
 	char		*digits;
 
-
 	digits = "0123456789abcdef";
-	c = ft_count_p(n);
+	c = ft_count(n);
 	str1 = malloc(sizeof(*str1) * (c + 1));
 	if (!str1)
 		return (NULL);

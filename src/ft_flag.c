@@ -75,15 +75,21 @@ int	exec_flag_u(va_list ptr)
 
 int	exec_flag_p(va_list ptr)
 {
-	int		x;
-	int		y;
-	char	*str1;
+	// unsigned long int		x;
+	void					*x;
+	int						y;
+	char					*str1;
 
-	x = va_arg(ptr, unsigned long int);
-	str1 = ft_ptoa(x);
+
+	// x = va_arg(ptr, unsigned long int);
+	x = va_arg(ptr, void *);
+	if (x == NULL)
+	{
+		y = ft_printf("(nil)");
+		return (y);
+	}
+	str1 = ft_ptoa((unsigned long int) x);
 	y = ft_printf("0x%s", str1);
 	free(str1);
 	return (y);
 }
-
-

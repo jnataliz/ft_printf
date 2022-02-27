@@ -417,3 +417,64 @@ FFFFFFFF
 	- vedere cosa fa `printf` in questo caso
 	- farsi un test
 	- cercare di soddisfare il test
+# 2022-02-27
+- `int` -> 4 bytes
+- `unsigned int` -> 4 bytes
+- `unsigned long int` = `unsigned long` -> 8 bytes
+-	`long int` = `long` -> 8 bytes
+- flag `%p` non va
+	- stampa solo dalla meta' in poi di caratteri
+- differenza tra `long` e `int`
+
+- `NULL` = `0x00` = `(void *) 0`
+- sistema operativo e' un programma
+- al lancio del pc il sistem operativo viene caricato in memoria
+- viene caricato in un'area di memoria dove non e' possibile ne leggere
+	ne scrivere
+```
+0x00
+0x01
+0x02
+0x03
+0x04
+...
+
+```
+- `int *`, `char *`, `void *`
+	- un puntatore e' un indirizzo in memoria
+	- un indirizzo occupa sempre 8 bytes (su una macchina a 64bit)
+	```
+	00000000
+	00000000
+	00000000
+	00000000
+	00000000
+	00000000
+	00000000
+	00000000
+	```
+	- `int*` o `char*` e' sempre un indirizzo in memoria
+		- hanno la stessa dimensione
+	- `void *` per indicare un indirizzo generico
+		- se vogliamo usare la memoria a cui punta come un `int`
+		- dobbiamo fare un cast `(int *)`
+- controllare uguaglianze tra stringhe
+```c
+	if (str1 == "0")
+	{
+		y = ft_printf("(nil)");
+		return (y);
+	}
+```
+- `str1` -> `char *`
+- `str1` -> `0x0083e`
+	
+- `(str1 == "0")` -> 
+- `zero` -> `0x009ef`
+```
+0x00083 '0'
+0x00084 \0
+0x00085
+```
+- tutti i test in `main` se vuoi metterli in una cartella separata
+	- e usare `libftprintf.a` quando compili il `main`

@@ -41,5 +41,10 @@ int	exec_flag(struct s_flag s, va_list	ptr)
 		x = exec_flag_u(ptr);
 	else if (s.code == 'p')
 		x = exec_flag_p(ptr);
+	else if (s.code == '%')
+	{
+		ft_putchar_fd('%', 1);
+		x++;
+	}
 	return (x);
 }

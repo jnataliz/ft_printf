@@ -24,6 +24,12 @@ struct s_flag	parse_flag(char c)
 	return (res);
 }
 
+int	exec_flag_c(va_list ptr)
+{
+	ft_putchar_fd(va_arg(ptr, int), 1);
+	return (1);
+}
+
 int	exec_flag(struct s_flag s, va_list	ptr)
 {
 	int	x;

@@ -16,12 +16,6 @@
 #include "stdarg.h"
 #include "ft_flag.h"
 
-int	exec_flag_c(va_list ptr)
-{
-	ft_putchar_fd(va_arg(ptr, int), 1);
-	return (1);
-}
-
 int	exec_flag_d_i(va_list ptr)
 {
 	int		z;
@@ -75,13 +69,10 @@ int	exec_flag_u(va_list ptr)
 
 int	exec_flag_p(va_list ptr)
 {
-	// unsigned long int		x;
 	void					*x;
 	int						y;
 	char					*str1;
 
-
-	// x = va_arg(ptr, unsigned long int);
 	x = va_arg(ptr, void *);
 	if (x == NULL)
 	{

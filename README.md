@@ -1,2 +1,2 @@
 # ft_printf
-[![jnataliz's 42 stats](https://badge42.herokuapp.com/api/stats/intra_id)](https://github.com/jnataliz/badge42)
+[![jnataliz 42 stats](https://badge42.herokuapp.com/api/stats/intra_id)](https://github.com/jnataliz/badge42)

@@ -476,5 +476,6 @@ FFFFFFFF
 0x00084 \0
 0x00085
 ```
-- tutti i test in `main` se vuoi metterli in una cartella separata
-	- e usare `libftprintf.a` quando compili il `main`
+
+# ft_printf [![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/jnataliz/ft_printf)](https://github.com/JaeSeoKim/badge42)
+[![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/jnataliz)](https://github.com/JaeSeoKim/badge42)

@@ -6,15 +6,15 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:06:38 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/26 16:12:17 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:33:59 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count(unsigned int n)
+int	ft_count(unsigned int n)
 {
-	int c;
+	int	c;
 
 	c = 1;
 	while (n >= 16)
@@ -34,8 +34,8 @@ char	*ft_xtoa(unsigned int n, int x)
 
 	if (x == 0)
 		digits = "0123456789abcdef";
-	else 
-		digits = "0123456789ABCDEF";	
+	else
+		digits = "0123456789ABCDEF";
 	c = ft_count(n);
 	str1 = malloc(sizeof(*str1) * (c + 1));
 	if (!str1)
@@ -50,4 +50,3 @@ char	*ft_xtoa(unsigned int n, int x)
 	}
 	return (str);
 }
-	

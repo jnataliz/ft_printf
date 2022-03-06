@@ -6,14 +6,12 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 19:37:08 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/21 19:54:19 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/27 20:48:20 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_printf.h"
-#include "stdarg.h"
-#include "ft_flag.h"
+#include "../include/ft_printf.h"
+#include "../include/ft_flag.h"
 
 int	ft_printf(const char *text, ...)
 {

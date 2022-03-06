@@ -6,14 +6,12 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 23:05:46 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/26 15:33:34 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/27 20:48:01 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_flag.h"
-#include "ft_printf.h"
-#include "libft.h"
-#include "stdarg.h"
+#include "../include/ft_printf.h"
+#include "../include/ft_flag.h"
 
 struct s_flag	parse_flag(char c)
 {

@@ -6,13 +6,14 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:34:44 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/25 00:19:03 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/27 20:49:17 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_FLAG_H
 # define FT_FLAG_H
 # include <stdarg.h>
+# include "../libft/libft.h"
 
 struct s_flag
 {

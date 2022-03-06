@@ -6,7 +6,7 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 10:55:57 by plpelleg          #+#    #+#             */
-/*   Updated: 2022/02/26 16:31:09 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/26 19:17:51 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

@@ -6,15 +6,12 @@
 /*   By: jnataliz <jnataliz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 17:48:04 by jnataliz          #+#    #+#             */
-/*   Updated: 2022/02/26 16:14:01 by jnataliz         ###   ########.fr       */
+/*   Updated: 2022/02/27 20:48:36 by jnataliz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_flag.h"
-#include "ft_printf.h"
-#include "libft.h"
-#include "stdarg.h"
-#include "ft_flag.h"
+#include "../include/ft_printf.h"
+#include "../include/ft_flag.h"
 
 int	exec_flag_d_i(va_list ptr)
 {
@@ -74,11 +71,6 @@ int	exec_flag_p(va_list ptr)
 	char					*str1;
 
 	x = va_arg(ptr, void *);
-	if (x == NULL)
-	{
-		y = ft_printf("(nil)");
-		return (y);
-	}
 	str1 = ft_ptoa((unsigned long int) x);
 	y = ft_printf("0x%s", str1);
 	free(str1);
